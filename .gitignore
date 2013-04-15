@@ -1,0 +1,6 @@
+# XCode user settings
+LevelGen.xcodeproj/project.xcworkspace/
+LevelGen.xcodeproj/xcuserdata/
+
+# OSX garbage
+.DS_Store
