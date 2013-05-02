@@ -50,14 +50,15 @@ def process_line(line):
 
     # detect the position of the start number
     start_pos = 0
-    while True:
+    for pos_marker in ("1r", "1l", "1d", "1u"):
         try:
-            start_pos = data.index("1", start_pos + 1)
-        except ValueError:
+            start_pos = data.index(pos_marker)
             break
+        except ValueError:
+            pass
     for nbr in numbers:
         if nbr == 1:
-            break
+            break;
 
         if nbr >= 10:
             start_pos -= 2
@@ -99,9 +100,15 @@ def process_line(line):
     # create random checkpoints
     checkpoints = []
     while len(checkpoints) < max_nbr - 2:
-        nbr = random.randint(1, (size * size) - 2)
-        if nbr not in checkpoints:
+        nbr = random.randint(2, (size * size) - 3)
+        allowed = True
+        for check_nbr in (nbr - 1, nbr, nbr + 1):
+            if check_nbr in checkpoints:
+                allowed = False
+                continue
+        if allowed:
             checkpoints.append(nbr)
+    # print sorted(checkpoints)
 
     # flag checkpoints
     for nbr, idx in enumerate(sorted(checkpoints), start=2):

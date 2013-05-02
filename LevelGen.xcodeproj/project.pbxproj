@@ -188,6 +188,7 @@
 		C8DBABA6171C9FCA009849B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = /Users/michaelcontento/Downloads/boost_1_53_0/boost_1_53_0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -195,6 +196,7 @@
 		C8DBABA7171C9FCA009849B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"HEADER_SEARCH_PATHS[arch=*]" = /Users/michaelcontento/Downloads/boost_1_53_0/boost_1_53_0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -218,6 +220,7 @@
 				C8DBABA7171C9FCA009849B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
